@@ -87,9 +87,9 @@ let checkWinner =()=>{
             }
         }
         }
-        if(count ===9){
-            matchDraw();
-        }
+       
+            
+        matchDraw();
 }
 
 resetButton.addEventListener("click",resetGame);
