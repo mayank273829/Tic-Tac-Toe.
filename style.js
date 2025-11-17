@@ -18,6 +18,7 @@ let winningPattern = [
 let resetGame = ()=>{
      turnOfO = true;
     enableBoxes();
+    count = 0;
     
 }
 
@@ -45,12 +46,12 @@ boxes.forEach((box)=>{
     })
 })
 
-let disableBoxes = (box) =>{
+let disableBoxes = () =>{
     for(let box of boxes){
         box.disabled = true;
     }
 }
-let enableBoxes = (box) =>{
+let enableBoxes = () =>{
     for(let box of boxes){
         box.disabled = false;
         box.innerText="";
@@ -62,6 +63,7 @@ let showWinner =(winner) =>{
     msg.innerText = `Congratulation Winner is ${winner}`;
     msgCont.classList.remove("hide");
     disableBoxes();
+    return;
 }
 
 let matchDraw = () =>{
@@ -94,3 +96,4 @@ let checkWinner =()=>{
 
 resetButton.addEventListener("click",resetGame);
 newGame.addEventListener("click",resetGame);
+
